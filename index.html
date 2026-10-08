@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Manish Baghel | Digital Marketing Executive & Growth Specialist</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        theme: {
+                            dark: '#111827',       /* Deep Dark Background */
+                            card: '#1F2937',       /* Elevated Card Surface */
+                            cardHover: '#283548',  /* Interactive Hover State */
+                            primary: '#8B5CF6',    /* Primary Violet */
+                            primaryHover: '#7C3AED',
+                            accent: '#C4B5FD',     /* Light Violet Highlight */
+                            light: '#F9FAFB',      /* Crisp Off-White Text */
+                            muted: '#6B7280',      /* Secondary Muted Gray */
+                            border: '#374151',     /* Standard Clean Borders */
+                        }
+                    },
+                    boxShadow: {
+                        'glow-primary': '0 0 25px -4px rgba(139, 92, 246, 0.45)',
+                        'glow-accent': '0 0 25px -4px rgba(196, 181, 253, 0.35)',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- External Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#111827] text-[#F9FAFB] antialiased selection:bg-[#8B5CF6] selection:text-[#F9FAFB] overflow-x-hidden">
+
+    <!-- NAVIGATION BAR -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#111827]/85 backdrop-blur-xl border-b border-[#374151]/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#8B5CF6] via-[#A78BFA] to-[#C4B5FD] flex items-center justify-center text-[#111827] font-extrabold text-lg shadow-lg shadow-[#8B5CF6]/30 group-hover:scale-105 transition-transform">
+                    MB
+                </div>
+                <div>
+                    <span class="text-base sm:text-lg font-bold tracking-tight text-[#F9FAFB] group-hover:text-[#C4B5FD] transition-colors">Manish Baghel</span>
+                    <span class="block text-[11px] sm:text-xs text-[#6B7280]">Growth Marketer & SEO</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-[#D1D5DB]">
+                <a href="#about" class="hover:text-[#C4B5FD] transition-colors">About</a>
+                <a href="#clients" class="hover:text-[#C4B5FD] transition-colors flex items-center gap-1.5">
+                    Live Projects
+                    <span class="w-2 h-2 rounded-full bg-[#8B5CF6] animate-pulse"></span>
+                </a>
+                <a href="#services" class="hover:text-[#C4B5FD] transition-colors">Expertise</a>
+                <a href="#experience" class="hover:text-[#C4B5FD] transition-colors">Experience</a>
+                <a href="#skills" class="hover:text-[#C4B5FD] transition-colors">Tools</a>
+                <a href="#contact" class="hover:text-[#C4B5FD] transition-colors">Contact</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="hidden sm:flex items-center gap-2.5 lg:gap-3">
+                <a href="https://www.linkedin.com/in/manish-baghel-04bb0425a/" 
+                   target="_blank" 
+                   title="Connect on LinkedIn" 
+                   class="w-10 h-10 rounded-xl bg-[#1F2937] border border-[#374151] hover:bg-[#8B5CF6] hover:text-[#F9FAFB] text-[#C4B5FD] flex items-center justify-center transition-all shadow-sm">
+                    <i class="fa-brands fa-linkedin-in text-base"></i>
+                </a>
+                <a href="https://wa.me/919315016935?text=Hi%20Manish%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project!" 
+                   target="_blank" 
+                   class="px-3.5 lg:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-[#F9FAFB] bg-[#8B5CF6] hover:bg-[#7C3AED] transition-all flex items-center gap-2 shadow-lg shadow-[#8B5CF6]/25">
+                    <i class="fa-brands fa-whatsapp text-base sm:text-lg"></i>
+                    <span>Chat on WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button id="mobileMenuBtn" aria-label="Toggle navigation menu" class="md:hidden text-[#F9FAFB] hover:text-[#C4B5FD] p-2.5 rounded-xl border border-[#374151] bg-[#1F2937]">
+                <i class="fa-solid fa-bars text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-[#111827] border-b border-[#374151] px-6 py-6 space-y-4">
+            <a href="#about" class="block text-[#F9FAFB] hover:text-[#C4B5FD] font-medium mobile-link">About</a>
+            <a href="#clients" class="block text-[#F9FAFB] hover:text-[#C4B5FD] font-medium mobile-link">Live Projects</a>
+            <a href="#services" class="block text-[#F9FAFB] hover:text-[#C4B5FD] font-medium mobile-link">Expertise</a>
+            <a href="#experience" class="block text-[#F9FAFB] hover:text-[#C4B5FD] font-medium mobile-link">Experience</a>
+            <a href="#skills" class="block text-[#F9FAFB] hover:text-[#C4B5FD] font-medium mobile-link">Tools</a>
+            <a href="#contact" class="block text-[#F9FAFB] hover:text-[#C4B5FD] font-medium mobile-link">Contact</a>
+            <div class="pt-4 border-t border-[#374151] space-y-2.5">
+                <a href="https://www.linkedin.com/in/manish-baghel-04bb0425a/" target="_blank" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#1F2937] border border-[#374151] text-[#C4B5FD] font-semibold text-sm">
+                    <i class="fa-brands fa-linkedin-in text-base"></i>
+                    Connect on LinkedIn
+                </a>
+                <a href="https://wa.me/919315016935?text=Hi%20Manish%2C%20I%20saw%20your%20portfolio!" target="_blank" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#8B5CF6] text-[#F9FAFB] font-semibold text-sm shadow-lg shadow-[#8B5CF6]/30">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    WhatsApp Contact
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- HERO SECTION -->
+        <section id="hero" class="relative min-h-[92vh] flex items-center justify-center overflow-hidden py-16 lg:py-24">
+            <!-- Background glow effects -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#8B5CF6]/15 rounded-full blur-[140px] pointer-events-none"></div>
+            <div class="absolute -bottom-20 right-10 w-[450px] h-[450px] bg-[#C4B5FD]/10 rounded-full blur-[130px] pointer-events-none"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                    
+                    <!-- Left Column: Copy -->
+                    <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                        <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#8B5CF6]/15 border border-[#8B5CF6]/35 text-[#C4B5FD] text-xs sm:text-sm font-semibold">
+                            <span class="w-2 h-2 rounded-full bg-[#8B5CF6] animate-ping"></span>
+                            <span>Available for Full-time Roles & High-Impact Freelance</span>
+                        </div>
+
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.2] sm:leading-[1.15]">
+                            Accelerating Business Growth with 
+                            <span class="gradient-text block mt-1.5">SEO, Paid Ads & Video</span>
+                        </h1>
+
+                        <p class="text-[#9CA3AF] text-sm sm:text-base lg:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                            Hi, I'm <strong class="text-[#F9FAFB]">Manish Baghel</strong> — a performance-driven 
+                            <span class="text-[#C4B5FD] font-semibold">Digital Marketing Executive</span> with 3+ years of experience. 
+                            Specialized in climbing Google SERP rankings, running high-ROI Meta & Google ad campaigns, and crafting brand-focused video content.
+                        </p>
+
+                        <!-- Highlights Badge Grid -->
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-2 max-w-xl mx-auto lg:mx-0 text-left">
+                            <div class="p-3.5 rounded-2xl bg-[#1F2937]/80 border border-[#374151]">
+                                <div class="text-[#C4B5FD] font-extrabold text-base sm:text-lg">3+ Years</div>
+                                <div class="text-[11px] sm:text-xs text-[#6B7280]">Marketing Experience</div>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-[#1F2937]/80 border border-[#374151]">
+                                <div class="text-[#8B5CF6] font-extrabold text-base sm:text-lg">Top Rankings</div>
+                                <div class="text-[11px] sm:text-xs text-[#6B7280]">Keyword Dominance</div>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-[#1F2937]/80 border border-[#374151] col-span-2 sm:col-span-1">
+                                <div class="text-[#F9FAFB] font-extrabold text-base sm:text-lg">Multi-Channel</div>
+                                <div class="text-[11px] sm:text-xs text-[#6B7280]">SEO + Ads + Video</div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Buttons -->
+                        <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center lg:justify-start gap-2.5 sm:gap-3.5 pt-3 sm:pt-4">
+                            <a href="#clients" class="col-span-2 sm:col-span-1 px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl font-semibold bg-[#8B5CF6] hover:bg-[#7C3AED] text-[#F9FAFB] shadow-lg shadow-[#8B5CF6]/30 transition-all flex items-center justify-center gap-2 hover:-translate-y-0.5 text-xs sm:text-sm">
+                                <span>View Live Work</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                            <a href="https://wa.me/919315016935?text=Hi%20Manish%2C%20let's%20connect!" target="_blank" class="px-4 sm:px-5 py-3 sm:py-3.5 rounded-xl font-semibold bg-[#1F2937] hover:bg-[#374151] text-[#F9FAFB] border border-[#374151] transition-all flex items-center justify-center gap-2 hover:-translate-y-0.5 text-xs sm:text-sm">
+                                <i class="fa-brands fa-whatsapp text-emerald-400 text-base sm:text-lg"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/manish-baghel-04bb0425a/" target="_blank" class="px-4 sm:px-5 py-3 sm:py-3.5 rounded-xl font-semibold bg-[#8B5CF6]/15 hover:bg-[#8B5CF6] text-[#C4B5FD] hover:text-[#F9FAFB] border border-[#8B5CF6]/40 transition-all flex items-center justify-center gap-2 hover:-translate-y-0.5 text-xs sm:text-sm">
+                                <i class="fa-brands fa-linkedin-in text-base text-[#C4B5FD]"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="tel:9315016935" class="col-span-2 sm:col-span-1 px-4 py-3 sm:py-3.5 rounded-xl font-semibold bg-[#1F2937] hover:bg-[#374151] text-[#D1D5DB] border border-[#374151] transition-all flex items-center justify-center gap-2 text-xs sm:text-sm">
+                                <i class="fa-solid fa-phone text-[#8B5CF6]"></i>
+                                <span>Call Directly</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Clean Portrait Frame without any overlapping badges -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-[290px] sm:max-w-[340px] md:max-w-[380px] group">
+                            
+                            <!-- Ambient Glow Backlight -->
+                            <div class="absolute -inset-1.5 bg-gradient-to-tr from-[#8B5CF6]/35 via-[#C4B5FD]/25 to-[#8B5CF6]/20 rounded-[2rem] blur-xl opacity-75 group-hover:opacity-100 transition duration-500 pointer-events-none"></div>
+                            
+                            <!-- Studio Frame Container -->
+                            <div class="relative rounded-[2rem] overflow-hidden border border-[#374151] bg-gradient-to-b from-[#1F2937] via-[#161F30] to-[#111827] shadow-2xl">
+                                
+                                <!-- Clean Image Showcase (100% unobscured, zero overlapping badges) -->
+                                <div class="relative pt-6 sm:pt-8 px-4 sm:px-6 pb-2 flex justify-center bg-gradient-to-b from-[#8B5CF6]/10 to-transparent">
+                                    <!-- Circular subtle halo backdrop -->
+                                    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-48 h-48 rounded-full bg-[#8B5CF6]/15 blur-2xl pointer-events-none"></div>
+                                    
+                                    <img src="assets/profile-nobg.png" 
+                                         alt="Manish Baghel - Digital Marketing Executive" 
+                                         class="w-auto h-[300px] sm:h-[360px] md:h-[400px] lg:h-[420px] object-contain object-bottom drop-shadow-[0_20px_35px_rgba(0,0,0,0.9)] transform group-hover:scale-[1.02] transition-transform duration-300">
+                                </div>
+
+                                <!-- Information Bar NEATLY BELOW the image -->
+                                <div class="p-5 bg-[#111827]/95 border-t border-[#374151] space-y-3">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <div class="flex items-center gap-1.5">
+                                                <h3 class="text-base font-bold text-[#F9FAFB]">Manish Baghel</h3>
+                                                <i class="fa-solid fa-circle-check text-[#8B5CF6] text-xs" title="Verified Digital Marketer"></i>
+                                            </div>
+                                            <p class="text-xs text-[#C4B5FD] font-medium">Digital Marketing & Growth Executive</p>
+                                        </div>
+                                        <div class="flex items-center gap-1.5 text-xs text-[#C4B5FD] bg-[#8B5CF6]/20 px-2.5 py-1 rounded-full border border-[#8B5CF6]/40 font-semibold">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-[#8B5CF6] animate-pulse"></span>
+                                            Available
+                                        </div>
+                                    </div>
+
+                                    <!-- Clean Skill Badges (Below, no overlap) -->
+                                    <div class="flex flex-wrap gap-1.5 pt-1">
+                                        <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#1F2937] border border-[#8B5CF6]/30 text-[11px] font-medium text-[#C4B5FD]">
+                                            <i class="fa-solid fa-arrow-trend-up text-[10px]"></i>
+                                            SEO & SERP
+                                        </span>
+                                        <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#1F2937] border border-[#8B5CF6]/30 text-[11px] font-medium text-[#C4B5FD]">
+                                            <i class="fa-brands fa-meta text-[10px]"></i>
+                                            Meta Ads
+                                        </span>
+                                        <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#1F2937] border border-[#8B5CF6]/30 text-[11px] font-medium text-[#C4B5FD]">
+                                            <i class="fa-solid fa-film text-[10px]"></i>
+                                            Video Editing
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- LIVE CLIENTS & PROJECTS SECTION -->
+        <section id="clients" class="py-20 relative bg-[#161F30]/50 border-y border-[#374151]/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <span class="text-xs font-bold uppercase tracking-wider text-[#C4B5FD] bg-[#8B5CF6]/15 px-3 py-1 rounded-full border border-[#8B5CF6]/40">
+                        Proven Experience
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[#F9FAFB]">
+                        Brands & Clients I've Worked For
+                    </h2>
+                    <p class="text-[#9CA3AF] text-sm sm:text-base">
+                        Real-world digital operations, comprehensive SEO, performance ads, and omnichannel social media execution.
+                    </p>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                    <!-- CLIENT 1: SIPL AUTOMOTIVES -->
+                    <div class="gradient-border rounded-3xl bg-[#1F2937]/90 p-6 sm:p-8 flex flex-col justify-between hover:bg-[#1F2937] transition-all group shadow-xl">
+                        <div class="space-y-6">
+                            
+                            <!-- Header -->
+                            <div class="flex items-start justify-between flex-wrap gap-4">
+                                <div class="space-y-1">
+                                    <div class="flex items-center gap-2">
+                                        <h3 class="text-2xl font-bold text-[#F9FAFB] group-hover:text-[#C4B5FD] transition-colors">
+                                            SIPL Automotives
+                                        </h3>
+                                        <span class="text-xs px-2.5 py-0.5 rounded-full bg-[#8B5CF6]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 font-medium">
+                                            Automotive & Manufacturing
+                                        </span>
+                                    </div>
+                                    <p class="text-sm text-[#9CA3AF]">
+                                        <span class="text-[#F9FAFB] font-medium">Role:</span> Digital Marketing Executive (SEO, Meta Ads & Social Operations)
+                                    </p>
+                                </div>
+
+                                <a href="https://siplautomotives.com/" target="_blank" class="px-4 py-2 rounded-xl bg-[#8B5CF6]/15 text-[#C4B5FD] hover:bg-[#8B5CF6] hover:text-[#F9FAFB] border border-[#8B5CF6]/35 text-xs font-semibold flex items-center gap-1.5 transition-all">
+                                    <span>Visit Website</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </div>
+
+                            <!-- Description -->
+                            <p class="text-sm text-[#D1D5DB] leading-relaxed">
+                                Managed end-to-end SEO strategy to enhance organic search presence across target automotive keywords. Spearheaded Meta Ads (Facebook & Instagram) campaigns targeting lead generation, paired with social media brand identity maintenance.
+                            </p>
+
+                            <!-- Key Deliverables -->
+                            <div class="space-y-2">
+                                <div class="text-xs font-semibold text-[#6B7280] uppercase tracking-wider">Key Contributions</div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#D1D5DB]">
+                                    <div class="flex items-center gap-2 bg-[#111827]/70 p-2.5 rounded-xl border border-[#374151]">
+                                        <i class="fa-solid fa-check-circle text-[#8B5CF6]"></i>
+                                        <span>On-Page & Technical SEO Optimization</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 bg-[#111827]/70 p-2.5 rounded-xl border border-[#374151]">
+                                        <i class="fa-solid fa-check-circle text-[#8B5CF6]"></i>
+                                        <span>Targeted Meta Ads Lead Campaigns</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 bg-[#111827]/70 p-2.5 rounded-xl border border-[#374151]">
+                                        <i class="fa-solid fa-check-circle text-[#8B5CF6]"></i>
+                                        <span>Keyword Ranking & SERP Tracking</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 bg-[#111827]/70 p-2.5 rounded-xl border border-[#374151]">
+                                        <i class="fa-solid fa-check-circle text-[#8B5CF6]"></i>
+                                        <span>Omnichannel Social Media Handling</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Footer Links -->
+                        <div class="pt-6 mt-6 border-t border-[#374151] flex items-center justify-between flex-wrap gap-4">
+                            <span class="text-xs font-medium text-[#6B7280]">Managed Social Handles:</span>
+                            <div class="flex items-center gap-2">
+                                <a href="https://www.instagram.com/sipl_automotives/" target="_blank" title="Instagram" class="w-9 h-9 rounded-lg bg-[#111827] hover:bg-[#8B5CF6] hover:text-[#F9FAFB] text-[#C4B5FD] border border-[#374151] flex items-center justify-center transition-all">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/company/sipl-automotives/?originalSubdomain=in" target="_blank" title="LinkedIn" class="w-9 h-9 rounded-lg bg-[#111827] hover:bg-[#8B5CF6] hover:text-[#F9FAFB] text-[#C4B5FD] border border-[#374151] flex items-center justify-center transition-all">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://www.facebook.com/siplpro" target="_blank" title="Facebook" class="w-9 h-9 rounded-lg bg-[#111827] hover:bg-[#8B5CF6] hover:text-[#F9FAFB] text-[#C4B5FD] border border-[#374151] flex items-center justify-center transition-all">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CLIENT 2: KEIZO LONDON -->
+                    <div class="gradient-border rounded-3xl bg-[#1F2937]/90 p-6 sm:p-8 flex flex-col justify-between hover:bg-[#1F2937] transition-all group shadow-xl">
+                        <div class="space-y-6">
+                            
+                            <!-- Header -->
+                            <div class="flex items-start justify-between flex-wrap gap-4">
+                                <div class="space-y-1">
+                                    <div class="flex items-center gap-2">
+                                        <h3 class="text-2xl font-bold text-[#F9FAFB] group-hover:text-[#C4B5FD] transition-colors">
+                                            KEIZO
+                                        </h3>
+                                        <span class="text-xs px-2.5 py-0.5 rounded-full bg-[#8B5CF6]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 font-medium">
+                                            Fashion & E-Commerce
+                                        </span>
+                                    </div>
+                                    <p class="text-sm text-[#9CA3AF]">
+                                        <span class="text-[#F9FAFB] font-medium">Role:</span> Digital Marketing & Multi-Channel Brand Growth
+                                    </p>
+                                </div>
+
+                                <a href="https://keizo.in/" target="_blank" class="px-4 py-2 rounded-xl bg-[#8B5CF6]/15 text-[#C4B5FD] hover:bg-[#8B5CF6] hover:text-[#F9FAFB] border border-[#8B5CF6]/35 text-xs font-semibold flex items-center gap-1.5 transition-all">
+                                    <span>Visit Website</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </div>
+
+                            <!-- Description -->
+                            <p class="text-sm text-[#D1D5DB] leading-relaxed">
+                                Drove multi-channel brand awareness and customer acquisition for lifestyle & fashion brand KEIZO. Executed content distribution, visual storytelling, YouTube video marketing, and high-engagement social campaigns across all channels.
+                            </p>
+
+                            <!-- Key Deliverables -->
+                            <div class="space-y-2">
+                                <div class="text-xs font-semibold text-[#6B7280] uppercase tracking-wider">Key Contributions</div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#D1D5DB]">
+                                    <div class="flex items-center gap-2 bg-[#111827]/70 p-2.5 rounded-xl border border-[#374151]">
+                                        <i class="fa-solid fa-check-circle text-[#8B5CF6]"></i>
+                                        <span>E-Commerce Social Content Strategy</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 bg-[#111827]/70 p-2.5 rounded-xl border border-[#374151]">
+                                        <i class="fa-solid fa-check-circle text-[#8B5CF6]"></i>
+                                        <span>YouTube Marketing & Video Outreach</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 bg-[#111827]/70 p-2.5 rounded-xl border border-[#374151]">
+                                        <i class="fa-solid fa-check-circle text-[#8B5CF6]"></i>
+                                        <span>Cross-Platform Brand Positioning</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 bg-[#111827]/70 p-2.5 rounded-xl border border-[#374151]">
+                                        <i class="fa-solid fa-check-circle text-[#8B5CF6]"></i>
+                                        <span>Influencer & Community Engagement</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Footer Links -->
+                        <div class="pt-6 mt-6 border-t border-[#374151] flex items-center justify-between flex-wrap gap-4">
+                            <span class="text-xs font-medium text-[#6B7280]">Managed Social Channels:</span>
+                            <div class="flex items-center gap-2">
+                                <a href="https://www.instagram.com/mykeizo/" target="_blank" title="Instagram" class="w-9 h-9 rounded-lg bg-[#111827] hover:bg-[#8B5CF6] hover:text-[#F9FAFB] text-[#C4B5FD] border border-[#374151] flex items-center justify-center transition-all">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://www.youtube.com/@mykeizo" target="_blank" title="YouTube" class="w-9 h-9 rounded-lg bg-[#111827] hover:bg-[#8B5CF6] hover:text-[#F9FAFB] text-[#C4B5FD] border border-[#374151] flex items-center justify-center transition-all">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                                <a href="https://x.com/keizo_london" target="_blank" title="X (Twitter)" class="w-9 h-9 rounded-lg bg-[#111827] hover:bg-[#8B5CF6] hover:text-[#F9FAFB] text-[#C4B5FD] border border-[#374151] flex items-center justify-center transition-all">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                </a>
+                                <a href="https://www.facebook.com/officialkeizolondon" target="_blank" title="Facebook" class="w-9 h-9 rounded-lg bg-[#111827] hover:bg-[#8B5CF6] hover:text-[#F9FAFB] text-[#C4B5FD] border border-[#374151] flex items-center justify-center transition-all">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CORE EXPERTISE & SERVICES -->
+        <section id="services" class="py-20 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <span class="text-xs font-bold uppercase tracking-wider text-[#C4B5FD] bg-[#8B5CF6]/15 px-3 py-1 rounded-full border border-[#8B5CF6]/40">
+                        Capabilities
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[#F9FAFB]">
+                        What I Bring to the Table
+                    </h2>
+                    <p class="text-[#9CA3AF] text-sm sm:text-base">
+                        Comprehensive digital marketing services that align technical search algorithms with high-converting creative execution.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Service 1 -->
+                    <div class="p-6 rounded-2xl bg-[#1F2937]/70 border border-[#374151] hover:border-[#8B5CF6]/60 hover:bg-[#1F2937] transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-xl bg-[#8B5CF6]/15 text-[#C4B5FD] flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-[#F9FAFB] mb-2 group-hover:text-[#C4B5FD] transition-colors">Advanced SEO & Ranking</h3>
+                        <p class="text-[#9CA3AF] text-sm leading-relaxed mb-4">
+                            In-depth keyword research, competitor gap analysis, robots.txt, HTML/XML sitemaps, internal linking architecture, and continuous SERP tracking.
+                        </p>
+                        <div class="text-xs text-[#C4B5FD] font-medium">On-Page • Technical • Backlink Analysis</div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="p-6 rounded-2xl bg-[#1F2937]/70 border border-[#374151] hover:border-[#8B5CF6]/60 hover:bg-[#1F2937] transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-xl bg-[#8B5CF6]/15 text-[#C4B5FD] flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-[#F9FAFB] mb-2 group-hover:text-[#C4B5FD] transition-colors">Meta Ads & Paid Search</h3>
+                        <p class="text-[#9CA3AF] text-sm leading-relaxed mb-4">
+                            High-intent campaign setup, audience segmentation, remarketing funnels, creative A/B testing, and cost-per-lead optimization on Facebook & Instagram.
+                        </p>
+                        <div class="text-xs text-[#C4B5FD] font-medium">Lead Gen • ROAS Optimization • Retargeting</div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="p-6 rounded-2xl bg-[#1F2937]/70 border border-[#374151] hover:border-[#8B5CF6]/60 hover:bg-[#1F2937] transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-xl bg-[#8B5CF6]/15 text-[#C4B5FD] flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-film"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-[#F9FAFB] mb-2 group-hover:text-[#C4B5FD] transition-colors">Video Editing & Showreel</h3>
+                        <p class="text-[#9CA3AF] text-sm leading-relaxed mb-4">
+                            Hands-on video editing in Adobe Premiere Pro & Filmora. Crafting dynamic Instagram Reels, YouTube videos, promotional ads, and brand story edits.
+                        </p>
+                        <div class="text-xs text-[#C4B5FD] font-medium">Premiere Pro • Filmora • YouTube Growth</div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="p-6 rounded-2xl bg-[#1F2937]/70 border border-[#374151] hover:border-[#8B5CF6]/60 hover:bg-[#1F2937] transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-xl bg-[#8B5CF6]/15 text-[#C4B5FD] flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-[#F9FAFB] mb-2 group-hover:text-[#C4B5FD] transition-colors">Social Media & Brand Growth</h3>
+                        <p class="text-[#9CA3AF] text-sm leading-relaxed mb-4">
+                            End-to-end community management, content calendars, brand tone building, and multi-channel posting across Instagram, LinkedIn, Facebook, and Twitter.
+                        </p>
+                        <div class="text-xs text-[#C4B5FD] font-medium">Content Calendars • Engagement • ORM</div>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="p-6 rounded-2xl bg-[#1F2937]/70 border border-[#374151] hover:border-[#8B5CF6]/60 hover:bg-[#1F2937] transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-xl bg-[#8B5CF6]/15 text-[#C4B5FD] flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-youtube"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-[#F9FAFB] mb-2 group-hover:text-[#C4B5FD] transition-colors">YouTube Channel Growth</h3>
+                        <p class="text-[#9CA3AF] text-sm leading-relaxed mb-4">
+                            Proven experience managing and monetizing YouTube channels. Video tags, titles, click-worthy thumbnails strategy, retention pacing, and algorithm leverage.
+                        </p>
+                        <div class="text-xs text-[#C4B5FD] font-medium">Monetization • Metadata Optimization • Retention</div>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="p-6 rounded-2xl bg-[#1F2937]/70 border border-[#374151] hover:border-[#8B5CF6]/60 hover:bg-[#1F2937] transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-xl bg-[#8B5CF6]/15 text-[#C4B5FD] flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-[#F9FAFB] mb-2 group-hover:text-[#C4B5FD] transition-colors">E-Commerce & CMS Management</h3>
+                        <p class="text-[#9CA3AF] text-sm leading-relaxed mb-4">
+                            Managing and optimizing WordPress and Shopify online stores, ensuring technical SEO compliance, fast page loads, clean URL hierarchies, and conversion pathways.
+                        </p>
+                        <div class="text-xs text-[#C4B5FD] font-medium">Shopify • WordPress • Conversion Rate</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- WORK EXPERIENCE TIMELINE -->
+        <section id="experience" class="py-20 relative bg-[#161F30]/50 border-y border-[#374151]/80">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <span class="text-xs font-bold uppercase tracking-wider text-[#C4B5FD] bg-[#8B5CF6]/15 px-3 py-1 rounded-full border border-[#8B5CF6]/40">
+                        Career Journey
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[#F9FAFB]">
+                        Professional Work Experience
+                    </h2>
+                    <p class="text-[#9CA3AF] text-sm sm:text-base">
+                        Track record of continuous growth across fast-paced agency environments and corporate brands.
+                    </p>
+                </div>
+
+                <!-- Timeline List -->
+                <div class="space-y-8 relative before:absolute before:inset-0 before:left-4 sm:before:left-5 md:before:left-1/2 before:-translate-x-px before:w-0.5 before:bg-gradient-to-b before:from-[#8B5CF6] before:via-[#A78BFA] before:to-[#C4B5FD]">
+
+                    <!-- Role 1: Sipl Automotives -->
+                    <div class="relative flex flex-col md:flex-row items-start md:items-center group">
+                        <div class="md:w-1/2 md:pr-10 md:text-right pl-11 sm:pl-12 md:pl-0 mb-3 md:mb-0">
+                            <span class="text-xs font-bold px-3 py-1 rounded-full bg-[#8B5CF6]/20 text-[#C4B5FD] border border-[#8B5CF6]/40">
+                                Apr 2026 – Present
+                            </span>
+                            <h3 class="text-xl font-bold text-[#F9FAFB] mt-2">Digital Marketing Executive</h3>
+                            <div class="text-[#C4B5FD] font-medium text-sm">Sipl Automotives</div>
+                        </div>
+
+                        <!-- Timeline Dot -->
+                        <div class="absolute left-4 sm:left-5 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-[#111827] border-2 border-[#8B5CF6] flex items-center justify-center text-[#C4B5FD] z-10 shadow-lg shadow-[#8B5CF6]/30">
+                            <i class="fa-solid fa-briefcase text-xs"></i>
+                        </div>
+
+                        <div class="md:w-1/2 md:pl-10 pl-11 sm:pl-12">
+                            <div class="p-5 sm:p-6 rounded-2xl bg-[#1F2937]/90 border border-[#374151] space-y-2">
+                                <ul class="text-sm text-[#D1D5DB] space-y-2 list-disc list-inside">
+                                    <li>Leading SEO strategy and technical execution to improve organic search rankings.</li>
+                                    <li>Planning and optimizing high-ROI Meta Ads (Facebook & Instagram) campaigns for verified lead generation.</li>
+                                    <li>Overseeing complete social media content strategy, publishing calendars, and performance reports.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Role 2: Vmitr -->
+                    <div class="relative flex flex-col md:flex-row items-start md:items-center group">
+                        <div class="md:w-1/2 md:pr-10 md:text-right pl-11 sm:pl-12 md:pl-0 mb-3 md:mb-0 md:order-1 order-2">
+                            <div class="p-5 sm:p-6 rounded-2xl bg-[#1F2937]/90 border border-[#374151] space-y-2">
+                                <ul class="text-sm text-[#D1D5DB] space-y-2 list-disc list-inside md:text-left">
+                                    <li>Managed full-funnel digital marketing operations and re-branding initiatives.</li>
+                                    <li>Led creative videography & video editing efforts to build compelling brand assets.</li>
+                                    <li>Boosted SERP rankings, managed email marketing campaigns, and executed monthly marketing agendas.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Dot -->
+                        <div class="absolute left-4 sm:left-5 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-[#111827] border-2 border-[#8B5CF6] flex items-center justify-center text-[#C4B5FD] z-10 shadow-lg shadow-[#8B5CF6]/30">
+                            <i class="fa-solid fa-video text-xs"></i>
+                        </div>
+
+                        <div class="md:w-1/2 md:pl-10 pl-11 sm:pl-12 md:order-2 order-1 mb-3 md:mb-0">
+                            <span class="text-xs font-bold px-3 py-1 rounded-full bg-[#8B5CF6]/20 text-[#C4B5FD] border border-[#8B5CF6]/40">
+                                Apr 2025 – Mar 2026
+                            </span>
+                            <h3 class="text-xl font-bold text-[#F9FAFB] mt-2">Digital Marketing Executive</h3>
+                            <div class="text-[#C4B5FD] font-medium text-sm">Vmitr - Vyapar Network International</div>
+                        </div>
+                    </div>
+
+                    <!-- Role 3: High in Digital -->
+                    <div class="relative flex flex-col md:flex-row items-start md:items-center group">
+                        <div class="md:w-1/2 md:pr-10 md:text-right pl-11 sm:pl-12 md:pl-0 mb-3 md:mb-0">
+                            <span class="text-xs font-bold px-3 py-1 rounded-full bg-[#8B5CF6]/20 text-[#C4B5FD] border border-[#8B5CF6]/40">
+                                Apr 2023 – Mar 2025
+                            </span>
+                            <h3 class="text-xl font-bold text-[#F9FAFB] mt-2">Social Media Executive</h3>
+                            <div class="text-[#C4B5FD] font-medium text-sm">High in Digital</div>
+                        </div>
+
+                        <!-- Timeline Dot -->
+                        <div class="absolute left-4 sm:left-5 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-[#111827] border-2 border-[#8B5CF6] flex items-center justify-center text-[#C4B5FD] z-10 shadow-lg shadow-[#8B5CF6]/30">
+                            <i class="fa-solid fa-hashtag text-xs"></i>
+                        </div>
+
+                        <div class="md:w-1/2 md:pl-10 pl-11 sm:pl-12">
+                            <div class="p-5 sm:p-6 rounded-2xl bg-[#1F2937]/90 border border-[#374151] space-y-2">
+                                <ul class="text-sm text-[#D1D5DB] space-y-2 list-disc list-inside">
+                                    <li>Managed online reputation and social engagement across FB, Instagram, YouTube, Pinterest, and Twitter.</li>
+                                    <li>Built hands-on YouTube channel growth strategies, resulting in successfully monetized channels.</li>
+                                    <li>Coordinated directly with clients on creative campaign ideation, copy, and analytics reporting.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TOOLS & TECH STACK -->
+        <section id="skills" class="py-20 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <span class="text-xs font-bold uppercase tracking-wider text-[#C4B5FD] bg-[#8B5CF6]/15 px-3 py-1 rounded-full border border-[#8B5CF6]/40">
+                        Toolkit
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[#F9FAFB]">
+                        Tools & Technologies I Work With
+                    </h2>
+                    <p class="text-[#9CA3AF] text-sm sm:text-base">
+                        Proficient with the industry's gold-standard suites for analytics, auditing, ad management, and creative editing.
+                    </p>
+                </div>
+
+                <!-- Tools Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
+                    
+                    <div class="p-4 rounded-2xl bg-[#1F2937]/60 border border-[#374151] flex flex-col items-center justify-center text-center gap-3 hover:border-[#8B5CF6] hover:bg-[#1F2937] transition-all group">
+                        <i class="fa-solid fa-chart-pie text-2xl text-[#C4B5FD] group-hover:scale-110 transition-transform"></i>
+                        <span class="text-xs font-semibold text-[#F9FAFB]">SEMrush</span>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-[#1F2937]/60 border border-[#374151] flex flex-col items-center justify-center text-center gap-3 hover:border-[#8B5CF6] hover:bg-[#1F2937] transition-all group">
+                        <i class="fa-solid fa-magnifying-glass text-2xl text-[#8B5CF6] group-hover:scale-110 transition-transform"></i>
+                        <span class="text-xs font-semibold text-[#F9FAFB]">Ahrefs</span>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-[#1F2937]/60 border border-[#374151] flex flex-col items-center justify-center text-center gap-3 hover:border-[#8B5CF6] hover:bg-[#1F2937] transition-all group">
+                        <i class="fa-brands fa-google text-2xl text-[#C4B5FD] group-hover:scale-110 transition-transform"></i>
+                        <span class="text-xs font-semibold text-[#F9FAFB]">Search Console</span>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-[#1F2937]/60 border border-[#374151] flex flex-col items-center justify-center text-center gap-3 hover:border-[#8B5CF6] hover:bg-[#1F2937] transition-all group">
+                        <i class="fa-solid fa-chart-simple text-2xl text-[#8B5CF6] group-hover:scale-110 transition-transform"></i>
+                        <span class="text-xs font-semibold text-[#F9FAFB]">Google Analytics 4</span>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-[#1F2937]/60 border border-[#374151] flex flex-col items-center justify-center text-center gap-3 hover:border-[#8B5CF6] hover:bg-[#1F2937] transition-all group">
+                        <i class="fa-brands fa-meta text-2xl text-[#C4B5FD] group-hover:scale-110 transition-transform"></i>
+                        <span class="text-xs font-semibold text-[#F9FAFB]">Meta Ads Manager</span>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-[#1F2937]/60 border border-[#374151] flex flex-col items-center justify-center text-center gap-3 hover:border-[#8B5CF6] hover:bg-[#1F2937] transition-all group">
+                        <i class="fa-brands fa-google text-2xl text-[#8B5CF6] group-hover:scale-110 transition-transform"></i>
+                        <span class="text-xs font-semibold text-[#F9FAFB]">Google AdWords</span>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-[#1F2937]/60 border border-[#374151] flex flex-col items-center justify-center text-center gap-3 hover:border-[#8B5CF6] hover:bg-[#1F2937] transition-all group">
+                        <i class="fa-solid fa-film text-2xl text-[#C4B5FD] group-hover:scale-110 transition-transform"></i>
+                        <span class="text-xs font-semibold text-[#F9FAFB]">Premiere Pro</span>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-[#1F2937]/60 border border-[#374151] flex flex-col items-center justify-center text-center gap-3 hover:border-[#8B5CF6] hover:bg-[#1F2937] transition-all group">
+                        <i class="fa-solid fa-video text-2xl text-[#8B5CF6] group-hover:scale-110 transition-transform"></i>
+                        <span class="text-xs font-semibold text-[#F9FAFB]">Filmora</span>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-[#1F2937]/60 border border-[#374151] flex flex-col items-center justify-center text-center gap-3 hover:border-[#8B5CF6] hover:bg-[#1F2937] transition-all group">
+                        <i class="fa-brands fa-wordpress text-2xl text-[#C4B5FD] group-hover:scale-110 transition-transform"></i>
+                        <span class="text-xs font-semibold text-[#F9FAFB]">WordPress CMS</span>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-[#1F2937]/60 border border-[#374151] flex flex-col items-center justify-center text-center gap-3 hover:border-[#8B5CF6] hover:bg-[#1F2937] transition-all group">
+                        <i class="fa-brands fa-shopify text-2xl text-[#8B5CF6] group-hover:scale-110 transition-transform"></i>
+                        <span class="text-xs font-semibold text-[#F9FAFB]">Shopify Store</span>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-[#1F2937]/60 border border-[#374151] flex flex-col items-center justify-center text-center gap-3 hover:border-[#8B5CF6] hover:bg-[#1F2937] transition-all group">
+                        <i class="fa-solid fa-image text-2xl text-[#C4B5FD] group-hover:scale-110 transition-transform"></i>
+                        <span class="text-xs font-semibold text-[#F9FAFB]">Photoshop</span>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-[#1F2937]/60 border border-[#374151] flex flex-col items-center justify-center text-center gap-3 hover:border-[#8B5CF6] hover:bg-[#1F2937] transition-all group">
+                        <i class="fa-solid fa-code text-2xl text-[#8B5CF6] group-hover:scale-110 transition-transform"></i>
+                        <span class="text-xs font-semibold text-[#F9FAFB]">HTML & Sitemaps</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT & ACADEMICS -->
+        <section id="about" class="py-20 relative bg-[#161F30]/50 border-y border-[#374151]/80">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    
+                    <div class="lg:col-span-6 space-y-6">
+                        <span class="text-xs font-bold uppercase tracking-wider text-[#C4B5FD] bg-[#8B5CF6]/15 px-3 py-1 rounded-full border border-[#8B5CF6]/40">
+                            About Me
+                        </span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#F9FAFB]">
+                            Strategist at Heart, Practitioner by Execution
+                        </h2>
+                        <p class="text-[#D1D5DB] text-sm sm:text-base leading-relaxed">
+                            Based in Delhi, I combine technical SEO architecture with creative social storytelling. My goal is simple: ensure that businesses don't just get traffic, but acquire <strong class="text-[#F9FAFB]">relevant, conversion-ready prospects</strong>.
+                        </p>
+                        <p class="text-[#9CA3AF] text-sm leading-relaxed">
+                            Whether optimizing robots.txt & backlink profiles or directing video edits on Premiere Pro for viral reach, I take full ownership of the digital growth funnel.
+                        </p>
+
+                        <!-- Academic Quick Card -->
+                        <div class="p-5 rounded-2xl bg-[#1F2937]/90 border border-[#374151] space-y-3">
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-[#C4B5FD] flex items-center gap-2">
+                                <i class="fa-solid fa-graduation-cap text-base text-[#8B5CF6]"></i>
+                                Education & Background
+                            </h4>
+                            <div class="space-y-1 text-sm text-[#D1D5DB]">
+                                <div class="flex justify-between items-center py-1 border-b border-[#374151]">
+                                    <span>Graduation (B.A. Programme)</span>
+                                    <span class="text-xs text-[#6B7280]">Pursuing from IGNOU</span>
+                                </div>
+                                <div class="flex justify-between items-center py-1">
+                                    <span>Senior Secondary & High School</span>
+                                    <span class="text-xs text-[#6B7280]">CBSE Board</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Personal Attributes & Languages -->
+                    <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        
+                        <div class="p-6 rounded-2xl bg-[#1F2937]/80 border border-[#374151] space-y-2">
+                            <i class="fa-solid fa-language text-2xl text-[#8B5CF6]"></i>
+                            <h3 class="font-bold text-[#F9FAFB] text-base">Languages</h3>
+                            <p class="text-xs text-[#9CA3AF]">Fluent in English and Hindi for client communication and multi-lingual ad copy.</p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-[#1F2937]/80 border border-[#374151] space-y-2">
+                            <i class="fa-solid fa-location-dot text-2xl text-[#C4B5FD]"></i>
+                            <h3 class="font-bold text-[#F9FAFB] text-base">Location & Mobility</h3>
+                            <p class="text-xs text-[#9CA3AF]">Delhi, India. Available for on-site, hybrid, and remote collaborations globally.</p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-[#1F2937]/80 border border-[#374151] space-y-2">
+                            <i class="fa-solid fa-compass text-2xl text-[#8B5CF6]"></i>
+                            <h3 class="font-bold text-[#F9FAFB] text-base">Passions</h3>
+                            <p class="text-xs text-[#9CA3AF]">Tech trends, creative videography, swimming, and exploring outdoor adventure.</p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-[#1F2937]/80 border border-[#374151] space-y-2">
+                            <i class="fa-solid fa-clock text-2xl text-[#C4B5FD]"></i>
+                            <h3 class="font-bold text-[#F9FAFB] text-base">Quick Turnaround</h3>
+                            <p class="text-xs text-[#9CA3AF]">High speed execution with proactive reporting and analytical transparency.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="py-20 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <span class="text-xs font-bold uppercase tracking-wider text-[#C4B5FD] bg-[#8B5CF6]/15 px-3 py-1 rounded-full border border-[#8B5CF6]/40">
+                        Get In Touch
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[#F9FAFB]">
+                        Let's Grow Your Brand Together
+                    </h2>
+                    <p class="text-[#9CA3AF] text-sm sm:text-base">
+                        Ready to elevate your organic search rankings or run high-converting ad campaigns? Reach out directly!
+                    </p>
+                </div>
+
+                <!-- Clean Direct Contact Grid (WhatsApp, LinkedIn, Call, Email) -->
+                <div class="max-w-5xl mx-auto">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mb-10">
+                        
+                        <!-- WhatsApp Card -->
+                        <a href="https://wa.me/919315016935?text=Hi%20Manish%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project!" 
+                           target="_blank"
+                           class="p-6 rounded-3xl bg-gradient-to-b from-[#1F2937] to-[#111827] border border-[#374151] hover:border-[#8B5CF6] transition-all text-center group shadow-xl flex flex-col items-center justify-between hover:-translate-y-1">
+                            <div class="w-14 h-14 rounded-2xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform mb-4">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div class="space-y-1 mb-5">
+                                <div class="text-[11px] text-emerald-400 font-semibold uppercase tracking-wider">Fastest Response</div>
+                                <h3 class="text-lg font-bold text-[#F9FAFB]">WhatsApp</h3>
+                                <p class="text-xs text-[#6B7280]">+91 9315016935</p>
+                            </div>
+                            <span class="w-full py-2.5 rounded-xl bg-[#8B5CF6] hover:bg-[#7C3AED] text-[#F9FAFB] font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 shadow-md shadow-[#8B5CF6]/20">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                                Start Chat
+                            </span>
+                        </a>
+
+                        <!-- LinkedIn Card -->
+                        <a href="https://www.linkedin.com/in/manish-baghel-04bb0425a/" 
+                           target="_blank"
+                           class="p-6 rounded-3xl bg-gradient-to-b from-[#8B5CF6]/15 via-[#1F2937] to-[#111827] border border-[#8B5CF6]/40 hover:border-[#8B5CF6] transition-all text-center group shadow-xl flex flex-col items-center justify-between hover:-translate-y-1">
+                            <div class="w-14 h-14 rounded-2xl bg-[#8B5CF6]/20 text-[#C4B5FD] flex items-center justify-center text-2xl group-hover:scale-110 transition-transform mb-4">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </div>
+                            <div class="space-y-1 mb-5">
+                                <div class="text-[11px] text-[#C4B5FD] font-semibold uppercase tracking-wider">Professional Network</div>
+                                <h3 class="text-lg font-bold text-[#F9FAFB]">LinkedIn</h3>
+                                <p class="text-xs text-[#6B7280]">@manish-baghel</p>
+                            </div>
+                            <span class="w-full py-2.5 rounded-xl bg-[#8B5CF6] hover:bg-[#7C3AED] text-[#F9FAFB] font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 shadow-md shadow-[#8B5CF6]/20">
+                                <i class="fa-brands fa-linkedin-in text-xs"></i>
+                                Connect Profile
+                            </span>
+                        </a>
+
+                        <!-- Call Card -->
+                        <a href="tel:9315016935" 
+                           class="p-6 rounded-3xl bg-gradient-to-b from-[#1F2937] to-[#111827] border border-[#374151] hover:border-[#8B5CF6] transition-all text-center group shadow-xl flex flex-col items-center justify-between hover:-translate-y-1">
+                            <div class="w-14 h-14 rounded-2xl bg-[#8B5CF6]/15 text-[#C4B5FD] flex items-center justify-center text-2xl group-hover:scale-110 transition-transform mb-4">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="space-y-1 mb-5">
+                                <div class="text-[11px] text-[#6B7280] font-semibold uppercase tracking-wider">Direct Call</div>
+                                <h3 class="text-lg font-bold text-[#F9FAFB]">Phone Support</h3>
+                                <p class="text-xs text-[#6B7280]">+91 9315016935</p>
+                            </div>
+                            <span class="w-full py-2.5 rounded-xl bg-[#1F2937] hover:bg-[#374151] text-[#F9FAFB] font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 border border-[#374151]">
+                                <i class="fa-solid fa-phone text-xs text-[#8B5CF6]"></i>
+                                Call Now
+                            </span>
+                        </a>
+
+                        <!-- Email Card -->
+                        <a href="mailto:manishbaghel3495@gmail.com" 
+                           class="p-6 rounded-3xl bg-gradient-to-b from-[#1F2937] to-[#111827] border border-[#374151] hover:border-[#8B5CF6] transition-all text-center group shadow-xl flex flex-col items-center justify-between hover:-translate-y-1">
+                            <div class="w-14 h-14 rounded-2xl bg-[#8B5CF6]/15 text-[#C4B5FD] flex items-center justify-center text-2xl group-hover:scale-110 transition-transform mb-4">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="space-y-1 mb-5">
+                                <div class="text-[11px] text-[#C4B5FD] font-semibold uppercase tracking-wider">Official Inquiries</div>
+                                <h3 class="text-lg font-bold text-[#F9FAFB]">Email</h3>
+                                <p class="text-xs text-[#6B7280] truncate w-full" title="manishbaghel3495@gmail.com">manishbaghel3495@...</p>
+                            </div>
+                            <span class="w-full py-2.5 rounded-xl bg-[#8B5CF6] hover:bg-[#7C3AED] text-[#F9FAFB] font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 shadow-md shadow-[#8B5CF6]/20">
+                                <i class="fa-solid fa-paper-plane text-xs"></i>
+                                Send Email
+                            </span>
+                        </a>
+
+                    </div>
+
+                    <!-- Location info banner -->
+                    <div class="p-4 rounded-2xl bg-[#1F2937]/60 border border-[#374151] flex items-center justify-center gap-3 text-center text-xs text-[#9CA3AF]">
+                        <i class="fa-solid fa-location-dot text-[#C4B5FD] text-sm"></i>
+                        <span>Location: Shiv Vihar, Karawal Nagar, Delhi – 110094, India</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-10 bg-[#0B0F19] border-t border-[#374151] text-[#6B7280] text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                © 2026 <strong class="text-[#F9FAFB]">Manish Baghel</strong>. All rights reserved.
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="https://www.linkedin.com/in/manish-baghel-04bb0425a/" target="_blank" class="hover:text-[#C4B5FD] transition-colors flex items-center gap-1.5">
+                    <i class="fa-brands fa-linkedin text-[#8B5CF6]"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://siplautomotives.com/" target="_blank" class="hover:text-[#C4B5FD] transition-colors">SIPL Automotives</a>
+                <a href="https://keizo.in/" target="_blank" class="hover:text-[#C4B5FD] transition-colors">KEIZO</a>
+                <a href="mailto:manishbaghel3495@gmail.com" class="hover:text-[#F9FAFB] transition-colors">manishbaghel3495@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Action Button (Mobile/Tablet/PC Responsive) -->
+    <a href="https://wa.me/919315016935?text=Hi%20Manish%2C%20I%20saw%20your%20portfolio!" 
+       target="_blank"
+       title="Quick WhatsApp Chat"
+       class="fixed fab-whatsapp right-4 sm:right-6 z-40 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-lg shadow-emerald-500/40 hover:scale-110 hover:bg-emerald-400 transition-all duration-300">
+        <i class="fa-brands fa-whatsapp text-xl sm:text-2xl"></i>
+    </a>
+
+    <!-- External JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>

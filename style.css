@@ -1,0 +1,92 @@
+/* ==========================================================================
+   Manish Baghel Portfolio - Responsive Stylesheet
+   Color Palette:
+   - Deep Dark:     #111827
+   - Primary:       #8B5CF6
+   - Accent/Light:  #C4B5FD
+   - Crisp Text:    #F9FAFB
+   - Muted/Borders: #6B7280
+   ========================================================================== */
+
+/* Universal Resets */
+*, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Smooth Scrolling & Base */
+html {
+    scroll-behavior: smooth;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    background-color: #111827;
+}
+
+body {
+    background-color: #111827;
+    color: #F9FAFB;
+    overflow-x: hidden;
+    touch-action: manipulation;
+}
+
+/* Custom Scrollbar */
+@media (min-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #111827;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #1F2937;
+        border: 1px solid #374151;
+        border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #8B5CF6;
+    }
+}
+
+/* Gradient Text Effect */
+.gradient-text {
+    background: linear-gradient(135deg, #F9FAFB 0%, #C4B5FD 50%, #8B5CF6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Modern Gradient Borders */
+.gradient-border {
+    position: relative;
+}
+
+.gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.45), rgba(196, 181, 253, 0.25), rgba(107, 114, 128, 0.2));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+/* Floating Action Button iPhone Safe-Area Inset */
+.fab-whatsapp {
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+}
+@media (min-width: 640px) {
+    .fab-whatsapp {
+        bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
+    }
+}
+
+/* Selection Color */
+::selection {
+    background-color: #8B5CF6;
+    color: #F9FAFB;
+}
